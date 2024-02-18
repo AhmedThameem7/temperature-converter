@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperature converter</title>
+    <style>
+        body{
+            background-image:url("../converter/pexels-magda-ehlers-3575827.jpg");
+        }
+        .bod{
+            height: 600px;
+            width:550px;
+            border:3px solid rgb(95, 26, 26);
+            border-radius: 5px;
+            margin:15% auto;
+        }
+        #inp{
+            height: 30px;
+            font-size: 20px;
+            color: black;
+        }
+        #H1{
+            text-align: center;
+            color: rgb(157, 236, 10);
+        }
+        label{
+            margin-left: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        #bt{
+            margin-left: 35%;
+            height: 45px;
+            width: 100px;
+            font-size: 20px;
+
+        }
+        #bt:hover{
+            background-color: rgb(35, 41, 92);
+            color: aliceblue;
+            transform: scale(1.2,1.2);
+        }
+        #ht{
+            font-size: 30px;
+            margin-left: 15px;
+            color: rgb(0, 0, 0);
+            margin-top: 70px;
+        }
+        #hp{
+            font-size: 30px;
+            margin-left: 15px;
+            color: rgb(0, 0, 0);
+            margin-top: 102px;
+        }
+        h3{
+            font-size: 40px;
+            color: rgb(5, 3, 3);
+            text-align: center;
+        }
+        #Hl{
+            font-size: 40px;
+            color: rgb(5, 3, 3);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bod">
+        <h1 id="H1">Temperature converter</h1>
+        <label>Celsius:</label>
+        <input type="number"id="inp" placeholder="Enter the temperature">
+        <br>
+        <br>
+        <button id="bt">Convert</button>
+        <h3 id="ht">Fahreheit Temperature:</h3>
+        <h3 id="H3"></h3>
+        <h3 id="hp">Kelvin Temperature:</h3>
+        <h3 id="Hl"></h3>
+    </div>
+    <script>
+        let C;
+        let fahrenheit;
+        let kelvin;
+        document.getElementById("bt").onclick=function(){
+            C=document.getElementById("inp").value;
+            fahrenheit=Number(fahrenheit);
+            fahrenheit=C*(9/5)+32;
+            document.getElementById("H3").textContent=fahrenheit;
+            C=document.getElementById("inp").value;
+            kelvin=Number(kelvin);
+            kelvin=Number(C)+273.15;
+            document.getElementById("Hl").textContent=kelvin;
+        }
+            
+    </script>
+</body>
+</html>
